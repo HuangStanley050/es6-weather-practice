@@ -1,9 +1,7 @@
-const KEY = "46a4a7c4361c7f91cdd384618953b341";
-
 export class Http {
     static fetchData(url) {
         return new Promise((resolve, reject) => {
-            const HTTP = XMLHttpRequest();
+            const HTTP = new XMLHttpRequest();
             HTTP.open("GET", url);
             HTTP.onreadystatechange = () => {
                 if (HTTP.readyState == XMLHttpRequest.DONE && HTTP.status == 200) {
@@ -14,6 +12,7 @@ export class Http {
                     reject("Something Went Wrong");
                 }
             };
+            HTTP.send();
         });
     }
 }
