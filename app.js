@@ -8,7 +8,7 @@ const searchWeather = () => {
     if (CITY_NAME.length == 0) {
         return alert("Please enter city name");
     }
-    const URL = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY_NAME + '&units=metrics&appid=' + KEY;
+    const URL = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY_NAME + '&units=metric&appid=' + KEY;
     ELEMENTS.ELEMENT_LOADING_TEXT.style.display = 'block';
     ELEMENTS.ELEMENT_WEATHER_BOX.style.display = 'none';
 
